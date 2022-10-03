@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HelloMaui.MainPage">
+    <Grid RowDefinitions="Auto,Auto"
+          ColumnDefinitions="Auto, Auto"
+          RowSpacing="12"
+          ColumnSpacing="12">
+        <VerticalStackLayout>
+            <Label Text="Type 'unfocus' to move the focus out of the Entry"
+                   FontAttributes="Bold"
+                   FontSize="14"/>
+            <Entry x:Name="entry"
+                   VerticalOptions="Start"
+                   TextChanged="entry_TextChanged"
+                   Focused="entry_Focused"
+                   Unfocused="entry_Unfocused"/>
+        </VerticalStackLayout>
+        <Button Grid.Row="1"
+                Grid.Column="0"
+                VerticalOptions="Start"
+                Text="Go to next page"
+                Clicked="Button_Clicked"/>
+        <Label x:Name="log"
+               Grid.Row="0"
+               Grid.Column="1"
+               Grid.RowSpan="2" />
+    </Grid>
+</ContentPage>
